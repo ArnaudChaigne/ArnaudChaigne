@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+==========
+Animation
+==========
+*/
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+:root {
+  --clr-primary: #eac937;
+  --clr-secondary: #cba328;
+  --ff-primary: "Roboto";
+  --radius: 0.5rem;
+}
+
+.banner {
+  min-height: 100vh;
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  display: flex;
+  background-size: cover;
+  background: url(./images/banner.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.maintitle {
+  position: absolute;
+  top: 5%;
+  left: 13%;
+}
+
+.jenlain {
+  background: -webkit-linear-gradient(transparent, transparent),
+    url("./images/textureor.jpg") transparent;
+  background-image: -o-linear-gradient(transparent, transparent);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: block;
+  font-family: Bebas Neue;
+  position: relative;
+  left: 30px;
+  font-size: 10rem;
+  color: url();
+  animation: slideFromLeft 3s ease-in-out 1;
+}
+
+.bras {
+  position: relative;
+  top: -35px;
+  font-family: var(--ff-primary);
+  color: white;
+  font-weight: 400;
+  font-size: 1.6rem;
+  animation: slideFromRight 3s ease-in-out 1;
+}
+
+.navboard {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  position: absolute;
+  top: 38%;
+  left: 17%;
+  font-size: 4rem;
+  animation: appear 5s ease-in;
+  font-family: irish grover;
+}
+.navboard2 {
+  list-style-type: none;
+}
+.navlink {
+  background: -webkit-linear-gradient(transparent, transparent),
+    url("./images/texturebi.jpg") transparent;
+  background-image: -o-linear-gradient(transparent, transparent);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: block;
+  text-decoration: none;
+}
+
+.banner2 {
+  min-height: 200vh;
+}
+
+.logo {
+  height: 150px;
+  background: rgba(240, 240, 23, 0.05);
+  text-align: center;
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+}
+
+.LogoTitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.LogoText {
+  font-size: 1rem;
+}
+
+.icone {
+  color: var(--clr-secondary);
+  font-size: 50px;
+}
+
+.logo:hover {
+  background: rgba(240, 240, 23, 0.2);
+  border-style: solid;
+  border-color: var(--clr-secondary);
+  transition: all 0.5s;
+}
+
+.logo:hover .icone {
+  font-size: 70px;
+  transition: all 0.5s;
+}
+
+.blanck {
+  height: 0;
+  width: 0;
+  float: left;
+}
+
+.imageAbout {
+  height: 300px;
+  width: 450px;
+  float: left;
+  border-style: solid;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.imageAbout1 {
+  height: 300px;
+  position: relative;
+}
+
+.about {
+  height: 300px;
+  width: 30%;
+  float: left;
+  position: relative;
+  top: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.abouto {
+  color: rgb(93, 161, 29);
+  font-family: dancing script;
+}
+
+.brewery {
+  font-family: irish grover;
+  font-size: 125%;
+}
+
+.imageAbout:hover .imageAbout1 {
+  transform: scale(1.4);
+  transition: all 0.5s linear;
+}
+
+@media screen and (min-width: 600px) {
+  .logo {
+    width: 50%;
+  }
+  .blanck {
+    height: 300px;
+    width: 10%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .logo {
+    width: 25%;
+  }
+  .blanck {
+    height: 300px;
+    width: 20%;
+    float: left;
+  }
+}
